@@ -1,4 +1,4 @@
-
+@extends('layout.master')
 
 @section('content')
 <section class="border-2 border-t-sky-600 max-w-full m-5 rounded-lg bg-white">
@@ -36,7 +36,7 @@
                     <td class="border px-2 py-2 whitespace-nowrap">1</td>
                     <td class="border px-2 py-2 whitespace-nowrap">Jose</td>
                     <td class="border px-2 py-2 whitespace-nowrap">Maricon</td>
-                    <td class="border px-2 py-2 whitespace-nowrap">Montes</td>
+                    <td class="border px-2 py-2 whitespace-nowrap">PUTA!!!</td>
                     <td class="border px-2 py-2 whitespace-nowrap">Lopez</td>
                     <td class="border px-2 py-2 whitespace-nowrap">Direccion</td>
                     <td class="border px-2 py-2 whitespace-nowrap">Cedula</td>

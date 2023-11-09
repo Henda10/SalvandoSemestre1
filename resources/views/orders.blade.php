@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layout.master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pedidos</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<div>
-    @include('components.navigation_links')
-</div>
-
-<body class="bg-gray-200">
+@section('content')
     <section class="border-2 border-t-sky-600 max-w-full m-5 rounded-lg bg-white">
         <div class="flex items-center justify-between border border-transparent border-b-gray-200 shadow-sm">
             <div class="flex items-center ml-5 my-3">
@@ -169,4 +152,4 @@
             </table>
         </div>
     </section>
-</body>
+@endsection

@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout-container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebarmenu-container {
+    width: 20%;
+    background-color: #2f343c;
+    height: 100vh;
+}
+
+.sidebarmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    overflow-y: auto;
+}
+
+.sidebarmenu__page-title {
+    display: flex;
+    border-bottom: 1px solid #4a4d56;
+    padding: 1rem .5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.sidebarmenu__user-info{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem .5rem;
+    font-family: candara;
+    border-bottom: 1px solid #4a4d56;
+    width: 95%;
+}
+
+.sidebarmenu__menu-list {
+    margin-top: 1rem;
+    width: 95%;
+}
+
+.menu-list {
+    display: grid;
+    list-style: none;
+    gap: .5rem;
+}
+
+.menu-list__dropdown-item,
+.menu-list__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu-list__dropdown-item:has(:checked) {
+    --rows: 1fr;
+    --pad: .5rem;
+    --rotate: rotate(90deg);
+}
+
+.dropdown-item__link,
+.item-link {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0c79f1;
+    gap: 5px;
+    padding-left: .5rem;
+    padding-right: .3rem;
+    border-radius: 4px;
+    position: relative;
+    align-items: center;
+    height: 35px;
+}
+
+.dropdown-item__icon {
+    display: flex;
+    width: 25px;
+    height: 25px;
+}
+
+.item-link__icon {
+    display: flex;
+    width: 25px;
+    height: 25px;
+}
+
+.dropdown-item__check {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.dropdown-item__arrow {
+    display: flex;
+    width: 20px;
+    height: 15px;
+    margin-left: auto;
+    transform: var(--rotate, rotate(180deg));
+    transition: .3s all;
+}
+
+.dropdown-item__content {
+    display: grid;
+    grid-template-rows: var(--rows, 0fr);
+    padding-top: var(--pad);
+    transition: .3s all;
+}
+
+.dropdown-item__sub {
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.sub-item {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    height: 35px;
+    gap: 5px;
+}
+
+.sub-item:hover {
+    background-color: #3a3e48;
+}
+
+.sub-item__icon {
+    display: flex;
+    width: 25px;
+    height: 25px;
+}
+
+.sub-item__anchor {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.sidebarmenu__logout-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin-top: 2rem;
+    font-family: candara;
+    gap: 1rem;
+    padding: 0 .5rem;
+    color: #bec1cc;
+}
+
+.logout-link {
+    text-decoration: none;
+    color: #bec1cc;
+}
+
+.logout-link:hover {
+    color: white
+}
+
+.client-area {
+    width: 80%;
+    background-color: #f2f5ff;
+}
+
+.client-area__header {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 1px 1px 5px gray;
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: .75rem;
+    background-color: white;
+}
+
+.client-area__centered-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.centered-content {
+    background-color: white;
+    width: 90%;
+    box-shadow: 0 2px 5px gray;
+    border-radius: 3px;
+    border-top: #0c79f1 3px solid;
+}
+
+.centered-content__header {
+    padding: .7rem 1rem;
+    border-bottom: 1px solid #d0d0d0;
+    font-size: 1.2rem;
+    font-family: candara;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.centered-content__header-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.centered-content__body {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.table-users {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+.table-users__header,
+.table-user__data {
+    border: 1px solid #d0d0d0;
+    text-align: left;
+    padding: 8px;
+}
+
+.table-users__rows:nth-child(even) {
+    background-color: #dddddd;
+}

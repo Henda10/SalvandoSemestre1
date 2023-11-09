@@ -28,7 +28,7 @@ class ViewsController extends Controller
 
     public function clients_list()
     {
-        return view('clients_list');
+        return view('clientes.Index');
     }
 
     public function orders()

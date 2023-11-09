@@ -31,6 +31,6 @@ Route::controller(ViewsController::class)->group(function () {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::get('/user_list', 'user_list')->name('user_list');
     Route::get('/motorcycle_guys_list', 'motorcycle_guys_list')->name('motorcycle_guys_list');
-    Route::get('/clients_list', 'clients_list')->name('clients_list');
+    Route::get('/clientes/Index', 'clients_list')->name('clients_list');
     Route::get('/orders', 'orders')->name('orders');
 });

@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layout.master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Motociclistas</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<div>
-    @include('components.navigation_links')
-</div>
-
-<body class="bg-gray-200">
+@section('content')
     <section class="border-2 border-t-sky-600 max-w-full m-5 rounded-lg bg-white">
         <div class="flex items-center justify-between border border-transparent border-b-gray-200 shadow-sm">
             <div class="flex items-center ml-5 my-3">
                 {{-- icono --}}
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em"
-                    viewBox="0 0 640 512" id="icon"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"
+                    id="icon"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                     <style>
                         #icon {
                             fill: #445163
@@ -109,8 +92,8 @@
                             {{-- eliminar --}}
                             <button
                                 class="border rounded-lg text-sm px-2 py-2 text-center font-semibold hover:bg-red-800 bg-red-600 text-white flex justify-center items-center">
-                                <svg xmlns="{{ asset('vendor/fontawesome-free/svgs/regular/trash-can') }}"
-                                    height="0.8rem" viewBox="0 0 448 512"
+                                <svg xmlns="{{ asset('vendor/fontawesome-free/svgs/regular/trash-can') }}" height="0.8rem"
+                                    viewBox="0 0 448 512"
                                     id="deleteUser"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
                                     <style>
                                         #deleteUser {
@@ -130,4 +113,4 @@
             </table>
         </div>
     </section>
-</body>
+@endsection
