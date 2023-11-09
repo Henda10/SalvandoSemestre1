@@ -11,7 +11,8 @@
 
 <body>
     <div class="form-container">
-        <h1>Sistema de registro de pedidos "Mandados Ya!"</h1>
+        <h1>Sistema de Registro de Pedidos "Mandados Rapidos"</h1>
+        <h2>SISREP</h2>
         <div class="form-container__center">
             <h1 class="form-title">Iniciar Sesion</h1>
             <form action="/login" method="POST" class="form-content login-form">

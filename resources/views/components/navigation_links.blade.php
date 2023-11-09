@@ -3,7 +3,7 @@ text-lg">
     <nav class="p-2">
         <ul class="flex justify-evenly items-center">
             <li>
-                <strong class="text-slate-900">Mandados Ya!</strong>
+                <strong class="text-slate-900">Mandados Rapidos</strong>
             </li>
             <li>
                 <p class="text-slate-700">Usuario en linea: <strong
