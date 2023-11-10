@@ -29,9 +29,9 @@
                     <ul class="menu-list">
                         <li class="menu-list__dropdown-item">
                             <a href="#" class="dropdown-item__link">
-                                <img src="{{ asset('images/Users.png')}}" alt="" class="dropdown-item__icon">
+                                <img src="{{ asset('/img/Users.png')}}" alt="" class="dropdown-item__icon">
                                 <span class="dropdown-item__span">Usuarios</span>
-                                <img src="./assets/arrow.png" alt="" class="dropdown-item__arrow">
+                                <img src="{{ asset('/img/arrow.png')}}" alt="" class="dropdown-item__arrow">
 
                                 <input type="checkbox" class="dropdown-item__check">
                             </a>
@@ -39,11 +39,11 @@
                             <div class="dropdown-item__content">
                                 <ul class="dropdown-item__sub">
                                     <li class="sub-item">
-                                        <img src="./assets/user.png" alt="" class="sub-item__icon">
+                                        <img src="{{ asset('/img/user.png')}}" alt="" class="sub-item__icon">
                                         <a href="{{ route('user_list')}}" class="sub-item__anchor">Lista de Usuarios</a>
                                     </li>
                                     <li class="sub-item">
-                                        <img src="./assets/user.png" alt="" class="sub-item__icon">
+                                        <img src="{{ asset('/img/user.png')}}" alt="" class="sub-item__icon">
                                         <a href="#" class="sub-item__anchor">Creacion de Usuarios</a>
                                     </li>
                                 </ul>
@@ -51,9 +51,9 @@
                         </li>
                         <li class="menu-list__dropdown-item">
                             <a href="#" class="dropdown-item__link">
-                                <img src="./assets/Motociclistas.png" alt="" class="dropdown-item__icon">
+                                <img src="{{ asset('/img/Motociclistas.png')}}" alt="" class="dropdown-item__icon">
                                 <span class="dropdown-item__span">Motociclistas</span>
-                                <img src="./assets/arrow.png" alt="" class="dropdown-item__arrow">
+                                <img src="{{ asset('/img/arrow.png')}}" alt="" class="dropdown-item__arrow">
 
                                 <input type="checkbox" class="dropdown-item__check">
                             </a>
@@ -61,11 +61,11 @@
                             <div class="dropdown-item__content">
                                 <ul class="dropdown-item__sub">
                                     <li class="sub-item">
-                                        <img src="./assets/Motociclista.png" alt="" class="sub-item__icon">
+                                        <img src="{{ asset('/img/Motociclistas.png')}}" alt="" class="sub-item__icon">
                                         <a href="{{ route('motorcycle_guys_list')}}" class="sub-item__anchor">Lista de Motociclistas</a>
                                     </li>
                                     <li class="sub-item">
-                                        <img src="./assets/Motociclista.png" alt="" class="sub-item__icon">
+                                        <img src="{{ asset('/img/Motociclistas.png')}}" alt="" class="sub-item__icon">
                                         <a href="#" class="sub-item__anchor">Creacion de Motociclistas</a>
                                     </li>
                                 </ul>
@@ -73,9 +73,9 @@
                         </li>
                         <li class="menu-list__dropdown-item">
                             <a href="#" class="dropdown-item__link">
-                                <img src="./assets/Customers.png" alt="" class="dropdown-item__icon">
+                                <img src="{{ asset('/img/Customers.png')}}" alt="" class="dropdown-item__icon">
                                 <span class="dropdown-item__span">Clientes</span>
-                                <img src="./assets/arrow.png" alt="" class="dropdown-item__arrow">
+                                <img src="{{ asset('/img/arrow.png')}}" alt="" class="dropdown-item__arrow">
 
                                 <input type="checkbox" class="dropdown-item__check">
                             </a>
@@ -83,11 +83,11 @@
                             <div class="dropdown-item__content">
                                 <ul class="dropdown-item__sub">
                                     <li class="sub-item">
-                                        <img src="./assets/user.png" alt="" class="sub-item__icon">
+                                        <img src="{{ asset('/img/user.png')}}" alt="" class="sub-item__icon">
                                         <a href="{{ route('clients_list')}}" class="sub-item__anchor">Lista de Clientes</a>
                                     </li>
                                     <li class="sub-item">
-                                        <img src="./assets/user.png" alt="" class="sub-item__icon">
+                                        <img src="{{ asset('/img/user.png')}}" alt="" class="sub-item__icon">
                                         <a href="#" class="sub-item__anchor">Creacion de Clientes</a>
                                     </li>
                                 </ul>
@@ -95,13 +95,13 @@
                         </li>
                         <li class="menu-list__item">
                             <a href="#" class="item-link">
-                                <img src="./assets/Delivery.png" alt="" class="item-link__icon">
+                                <img src="{{ asset('/img/Delivery.png')}}" alt="" class="item-link__icon">
                                 <span class="item__span">Delivery</span>
                             </a>
                         </li>
                         <li class="menu-list__item">
                             <a href="{{ route('orders')}}" class="item-link">
-                                <img src="./assets/Pedidos.png" alt="" class="item-link__icon">
+                                <img src="{{ asset('/img/Pedidos.png')}}" alt="" class="item-link__icon">
                                 <span class="item__span">Pedidos</span>
                             </a>
                         </li>
