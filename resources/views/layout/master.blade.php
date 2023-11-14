@@ -84,11 +84,11 @@
                                 <ul class="dropdown-item__sub">
                                     <li class="sub-item">
                                         <img src="{{ asset('/img/user.png')}}" alt="" class="sub-item__icon">
-                                        <a href="{{ route('clients_list')}}" class="sub-item__anchor">Lista de Clientes</a>
+                                        <a href="{{ route('clientes.index')}}" class="sub-item__anchor">Lista de Clientes</a>
                                     </li>
                                     <li class="sub-item">
                                         <img src="{{ asset('/img/user.png')}}" alt="" class="sub-item__icon">
-                                        <a href="#" class="sub-item__anchor">Creacion de Clientes</a>
+                                        <a href="{{route('clientes.create')}}" class="sub-item__anchor">Creacion de Clientes</a>
                                     </li>
                                 </ul>
                             </div>

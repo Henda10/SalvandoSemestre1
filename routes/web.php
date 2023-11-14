@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ClientesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,8 @@ Route::controller(ViewsController::class)->group(function () {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::get('/user_list', 'user_list')->name('user_list');
     Route::get('/motorcycle_guys_list', 'motorcycle_guys_list')->name('motorcycle_guys_list');
-    Route::get('/clientes/Index', 'clients_list')->name('clients_list');
+
     Route::get('/orders', 'orders')->name('orders');
 });
+
+Route::resource('/clientes',ClientesController::class);

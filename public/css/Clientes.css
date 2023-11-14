@@ -1,0 +1,43 @@
+.clientes-container{
+margin-left: 2%;
+margin-top: 1%;
+}
+.clientes-form{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+.clientes-label {
+    color: black;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.input-clientes {
+    height: 43px;
+    width: 50%;
+    background-color:#b5b5b5;
+    color: black;
+    font-display: auto;
+    padding-left: 2%;
+}
+.send-btn {
+    border: 0;
+    background-color: orange;
+    border-radius: 8px;
+    color:white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    margin:auto;
+    cursor: pointer;
+}
+
+.spn-btn{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+}
+.send-btn:active{
+    transform: scale(0.9);
+}
