@@ -46,9 +46,8 @@
             <table class="min-w-full divide-y divide-gray-200 my-3">
                 <thead class="bg-gray-100 text-center border divide-y">
                     <tr>
-                        <th class="border px-2 py-2">Nro</th>
+                        <th class="border px-2 py-2">Id</th>
                         <th class="border px-2 py-2">Cliente</th>
-                        <th class="border px-2 py-2">CI/NIT</th>
                         <th class="border px-2 py-2">Celular</th>
                         <th class="border px-2 py-2">Dirección</th>
                         <th class="border px-2 py-2">Pedido completo</th>
@@ -61,12 +60,17 @@
                     <tr class="text-center">
                         <td class="border px-2 py-2 whitespace-nowrap">1</td>
                         <td class="border px-2 py-2 whitespace-nowrap">{{ auth()->user()->name }}</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">123456</td>
                         <td class="border px-2 py-2 whitespace-nowrap">6666-6666</td>
                         <td class="border px-2 py-2 whitespace-nowrap">En el infinito y más allá</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">2 cajitas feliz de tip top</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">Henry</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">Entregando</td>
+                        <td class="border px-2 py-2 whitespace-nowrap"><button>Ver pedido completo</button></td>
+                        <td class="border px-2 py-2 whitespace-nowrap">
+                            <label for="motociclistas"></label>
+                            <select name="motociclistas" id="motociclistas">
+                                <option>Seleccionar</option>
+                                <option value="Denis">Denis</option>
+                            </select>
+                        </td>
+                        <td class="border px-2 py-2 whitespace-nowrap">Sin asignar</td>
                         {{-- Acciones --}}
                         <td class="border px-2 py-2 flex justify-around items-center">
                             {{-- editar --}}
@@ -133,10 +137,9 @@
             <table class="min-w-full divide-y divide-gray-200 my-3">
                 <thead class="bg-gray-100 text-center border divide-y">
                     <tr>
-                        <th class="border px-2 py-2">Nro</th>
+                        <th class="border px-2 py-2">Id</th>
                         <th class="border px-2 py-2">Motociclistas</th>
                         <th class="border px-2 py-2">Celular</th>
-                        <th class="border px-2 py-2">Correo</th>
                         <th class="border px-2 py-2">Pedidos asignados</th>
                     </tr>
                 </thead>
@@ -145,7 +148,6 @@
                         <td class="border px-2 py-2 whitespace-nowrap">1</td>
                         <td class="border px-2 py-2 whitespace-nowrap">{{ auth()->user()->name }}</td>
                         <td class="border px-2 py-2 whitespace-nowrap">6666-6666</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">dummy_user@gmail.com</td>
                         <td class="border px-2 py-2 whitespace-nowrap"></td>
                     </tr>
                 </tbody>

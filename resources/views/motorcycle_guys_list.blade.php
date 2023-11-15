@@ -46,15 +46,15 @@
             <table class="min-w-full divide-y divide-gray-200 my-3">
                 <thead class="bg-gray-100 text-center border divide-y">
                     <tr>
-                        <th class="border px-2 py-2">Nro</th>
-                        <th class="border px-2 py-2">Nombre Completo</th>
-                        <th class="border px-2 py-2">Ci</th>
-                        <th class="border px-2 py-2">Cargo</th>
-                        <th class="border px-2 py-2">Fecha de Nacimiento</th>
-                        <th class="border px-2 py-2">Placa</th>
-                        <th class="border px-2 py-2">Genero</th>
+                        <th class="border px-2 py-2">Id</th>
+                        <th class="border px-2 py-2">Primer Nombre</th>
+                        <th class="border px-2 py-2">Segundo Nombre</th>
+                        <th class="border px-2 py-2">Primer Apellido</th>
+                        <th class="border px-2 py-2">Segundo Apellido</th>
+                        <th class="border px-2 py-2">Cedula</th>
                         <th class="border px-2 py-2">Celular</th>
-                        <th class="border px-2 py-2">Email</th>
+                        <th class="border px-2 py-2">Numero de licencia</th>
+                        <th class="border px-2 py-2">Moto asignada</th>
                         <th class="border px-2 py-2">Acciones</th>
                     </tr>
                 </thead>
@@ -62,13 +62,14 @@
                     <tr class="text-center">
                         <td class="border px-2 py-2 whitespace-nowrap">1</td>
                         <td class="border px-2 py-2 whitespace-nowrap">{{ auth()->user()->name }}</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">123456</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">Administrador</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">{{ Carbon\Carbon::today() }}</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">MT-37519</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">No Binario</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">Rene</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">Galeano</td>
+                        {{--<td class="border px-2 py-2 whitespace-nowrap">{{ Carbon\Carbon::today() }}</td>--}}
+                        <td class="border px-2 py-2 whitespace-nowrap">Montes</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">4428956414512M</td>
                         <td class="border px-2 py-2 whitespace-nowrap">6666-6666</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">dummy_user@gmail.com</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">54574544</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">MT-125455</td>
                         {{-- Acciones --}}
                         <td class="border px-2 py-2 flex justify-around items-center">
                             {{-- editar --}}
