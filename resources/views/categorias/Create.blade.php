@@ -11,5 +11,6 @@
                 <span class="span spn-btn">Agregar</span>
             </button>
         </form>
+        <button class="btn send-btn" ><a href="{{route('categorias.index')}}">Regresar</a></button>
     </div>
 @endsection
