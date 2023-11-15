@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\CategoriasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,4 @@ Route::controller(ViewsController::class)->group(function () {
 });
 
 Route::resource('/clientes',ClientesController::class);
+Route::resource('/categorias',CategoriasController::class);
