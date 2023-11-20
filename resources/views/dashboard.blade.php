@@ -22,15 +22,15 @@
         <table class="min-w-full divide-y divide-gray-200 my-3">
             <thead class="bg-gray-100 text-center border divide-y">
                 <tr>
+                    <th class="border px-2 py-2">Cedula</th>
                     <th class="border px-2 py-2">Nombre</th>
-                    <th class="border px-2 py-2">Ci</th>
                     <th class="border px-2 py-2">Cargo</th>
                 </tr>
             </thead>
             <tbody class="bg-white divide-y min-w-full divide-gray-200">
                 <tr class="text-center">
+                    <td class="border px-2 py-2 whitespace-nowrap">4419879565478L</td>
                     <td class="border px-2 py-2 whitespace-nowrap">{{ auth()->user()->name }}</td>
-                    <td class="border px-2 py-2 whitespace-nowrap">123456</td>
                     <td class="border px-2 py-2 whitespace-nowrap">Administrador</td>
                 </tr>
             </tbody>
