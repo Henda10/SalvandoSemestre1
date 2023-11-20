@@ -55,24 +55,35 @@ class CategoriasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Categorias $categorias)
+    public function edit($id)
     {
-        //
+        $categoria=Categorias::find($id);
+        return view('categorias.Edit',compact('categoria'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Categorias $categorias)
+    public function update(CategoriasRequest $request, Categorias $categoria)
     {
-        //
+        try{
+            $request->validated();
+            $categoria->Categoria=$request->Categoria;
+            $categoria->save();
+            return redirect()->route('categorias.index')
+            ->withadd('Cliente Creado');
+        }catch (Exception $e){
+            return redirect()->route('categorias.index')
+            -> withadd('Hay un error');
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Categorias $categorias)
+    public function destroy(Categorias $categoria)
     {
-        //
+        $categoria->delete();
+        return redirect('/categorias');
     }
 }

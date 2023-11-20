@@ -39,24 +39,24 @@ class ClientesController extends Controller
 
     }
     public function edit($id){
-        $client=Clientes::find($id);
-        return view('clientes.Edit',compact('client'));
+        $cliente=Clientes::find($id);
+        return view('clientes.Edit',compact('cliente'));
     }
     public function update(ClientesRequest $request, Clientes $cliente)
     {
         try {
             $request->validated();
-            $client->Primernombre = $request -> Primernombre;
-            $client->Segundonombre = $request -> Segundonombre;
-            $client->PrimerApellido = $request -> PrimerApellido;
-            $client->SegundoApellido = $request -> SegundoApellido;
-            $client->Direccion = $request -> Direccion;
-            $client->Celular = $request -> Celular;
-            $client->save();
+            $cliente->Primernombre = $request -> Primernombre;
+            $cliente->Segundonombre = $request -> Segundonombre;
+            $cliente->PrimerApellido = $request -> PrimerApellido;
+            $cliente->SegundoApellido = $request -> SegundoApellido;
+            $cliente->Direccion = $request -> Direccion;
+            $cliente->Celular = $request -> Celular;
+            $cliente->save();
             return redirect()->route('clientes.index')
-            -> withadd('Categoria Creada');
+            -> withadd('Cliente Actualizado');
         } catch (Exception $e) {
-            return redirect()->route('clientes.index')
+            return redirect()->back()
             -> withadd('Hay un error');
         }
     }
