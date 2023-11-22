@@ -44,10 +44,10 @@ class EmployeesController extends Controller
             $employees->Cedula = $request -> input('Cedula');
             $employees->Numero = $request -> input('Numero');
             $employees->save();
-            return redirect()->route('users.create')
+            return redirect()->route('usuarios.index')
             ->withadd('Usuario Creado');
         }catch (Exception $e){
-            return redirect()->route('users.create')
+            return redirect()->route('usuarios.create')
             -> withadd('Hay un error');
 
         }
@@ -64,17 +64,33 @@ class EmployeesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Employees $employees)
+    public function edit($id)
     {
-        //
+        $employees=Employees::find($id);
+        return view('users.Edit',compact('employees'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Employees $employees)
+    public function update(EmployeesRequest $request, Employees $employees)
     {
-        //
+        try {
+            $request->validated();
+            $employees->Primernombre = $request -> Primernombre;
+            $employees->Segundonombre = $request -> Segundonombre;
+            $employees->PrimerApellido = $request -> PrimerApellido;
+            $employees->SegundoApellido = $request -> SegundoApellido;
+            $employees->Cedula = $request -> Cedula;
+            $employees->Numero = $request -> Numero;
+            $employees->save();
+            return redirect()->route('usuarios.index')
+            ->withadd('Usuario Actualizado');
+        } catch (Exception $e) {
+            return redirect()->route('usuarios.create')
+            -> withadd('Hay un error');
+
+        }
     }
 
     /**
@@ -82,6 +98,7 @@ class EmployeesController extends Controller
      */
     public function destroy(Employees $employees)
     {
-        //
+        $employees->delete();
+        return redirect('/usuarios');
     }
 }

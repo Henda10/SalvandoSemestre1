@@ -81,19 +81,21 @@
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y min-w-full divide-gray-200">
+                    @foreach ( $employees as $empleado )
                     <tr class="text-center">
-                        <td class="border px-2 py-2 whitespace-nowrap">1</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">{{ auth()->user()->name }}</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">David</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">Herrera</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">Guevara</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">{{$empleado->id}}</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">{{$empleado->Primernombre}}</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">{{$empleado->Segundonombre}}</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">{{$empleado->PrimerApellido}}</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">{{$empleado->SegundoApellido}}</td>
                         {{--<td class="border px-2 py-2 whitespace-nowrap">{{ Carbon\Carbon::today() }}</td>--}}
-                        <td class="border px-2 py-2 whitespace-nowrap">4419879565478L</td>
-                        <td class="border px-2 py-2 whitespace-nowrap">6666-6666</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">{{$empleado->Cedula}}L</td>
+                        <td class="border px-2 py-2 whitespace-nowrap">{{$empleado->Numero}}</td>
                         {{-- Acciones --}}
                         <td class="border px-2 py-2 flex justify-around items-center">
                             {{-- editar --}}
-                            <button
+                            <a href="{{route('usuarios.edit',$empleado->id)}}">
+                                <button
                                 class="border rounded-lg text-sm px-2 py-2 text-center font-semibold hover:bg-green-800 bg-green-600 text-white flex justify-center items-center">
                                 <svg xmlns="{{ asset('vendor/fontawesome-free/svgs/solid/user-pen') }}" height="0.8rem"
                                     viewBox="0 0 640 512"
@@ -110,28 +112,34 @@
                                     <span class="m-1">Editar</span>
                                 </div>
                             </button>
-                            {{-- eliminar --}}
-                            <button
-                                class="border rounded-lg text-sm px-2 py-2 text-center font-semibold hover:bg-red-800 bg-red-600 text-white flex justify-center items-center">
-                                <svg xmlns="{{ asset('vendor/fontawesome-free/svgs/regular/trash-can') }}" height="0.8rem"
-                                    viewBox="0 0 448 512"
-                                    id="deleteUser"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
-                                    <style>
-                                        #deleteUser {
-                                            fill: white
-                                        }
-                                    </style>
-                                    <path
-                                        d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z" />
-                                </svg>
-                                <div>
-                                    <span class="m-1">Eliminar</span>
-                                </div>
-                            </button>
+                            </a>
+                            <form action="{{route('usuarios.destroy',$empleado)}}"method="POST">
+                                @csrf
+                                @method('delete')
+                                <button
+                                    class="border rounded-lg text-sm px-2 py-2 text-center font-semibold hover:bg-red-800 bg-red-600 text-white flex justify-center items-center">
+                                    <svg xmlns="{{ asset('vendor/fontawesome-free/svgs/regular/trash-can') }}" height="0.8rem"
+                                        viewBox="0 0 448 512"
+                                        id="deleteUser"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                                        <style>
+                                            #deleteUser {
+                                                fill: white
+                                            }
+                                        </style>
+                                        <path
+                                            d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z" />
+                                    </svg>
+                                    <div>
+                                        <span class="m-1">Eliminar</span>
+                                    </div>
+                                </button>
+                            </form>
                         </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
     </section>
+    {{$employees->links()}}
 @endsection

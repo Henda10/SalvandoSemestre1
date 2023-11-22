@@ -16,7 +16,7 @@
             <label for="SegundoApellido" class="clientes-label label">Segundo Apellido</label>
             <input type="text" class="input input-clientes" name="SegundoApellido" placeholder="Segundo Apellido" value="{{old('SegundoApellido')}}">
 
-            <label for="Cedula" class="clientes-label label">Direccion</label>
+            <label for="Cedula" class="clientes-label label">Cedula</label>
             <input type="text" class="input input-clientes" name="Cedula" placeholder="Cedula" value="{{old('Cedula')}}">
 
             <label for="Numero" class="clientes-label label">Celular</label>

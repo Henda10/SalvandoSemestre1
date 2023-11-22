@@ -34,6 +34,7 @@ class ClientesController extends Controller
             -> withadd('Hay un error');
 
         }
+        //
     }
     public function show(Clientes $cliente){
 
