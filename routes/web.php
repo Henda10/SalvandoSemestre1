@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\CategoriasController;
+use App\Http\Controllers\EmployeesController;
 use App\Http\Controllers\MotosController;
 
 /*
@@ -32,7 +33,6 @@ Route::get('/logout', [LogoutController::class, 'logout']);
 
 Route::controller(ViewsController::class)->group(function () {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
-    Route::get('/user_list', 'user_list')->name('user_list');
     Route::get('/motorcycle_guys_list', 'motorcycle_guys_list')->name('motorcycle_guys_list');
 
     Route::get('/orders', 'orders')->name('orders');
@@ -41,3 +41,4 @@ Route::controller(ViewsController::class)->group(function () {
 Route::resource('/clientes',ClientesController::class);
 Route::resource('/categorias',CategoriasController::class);
 Route::resource('/Motos',MotosController::class);
+Route::resource('/usuarios',EmployeesController::class);

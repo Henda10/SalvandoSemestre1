@@ -36,7 +36,7 @@
                             </svg>
                         </div>
                         <div>
-                            <span class="m-1">Nuevo usuario</span>
+                            <a href="{{route('usuarios.create')}}" class="m-1">Nuevo usuario</a>
                         </div>
                     </button>
                     <button

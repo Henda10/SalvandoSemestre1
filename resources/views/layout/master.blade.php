@@ -40,11 +40,11 @@
                                 <ul class="dropdown-item__sub">
                                     <li class="sub-item">
                                         <img src="{{ asset('/img/user.png')}}" alt="" class="sub-item__icon">
-                                        <a href="{{ route('user_list')}}" class="sub-item__anchor">Lista de Usuarios</a>
+                                        <a href="{{ route('usuarios.index')}}" class="sub-item__anchor">Lista de Usuarios</a>
                                     </li>
                                     <li class="sub-item">
                                         <img src="{{ asset('/img/user.png')}}" alt="" class="sub-item__icon">
-                                        <a href="#" class="sub-item__anchor">Creacion de Usuarios</a>
+                                        <a href="{{ route('usuarios.create')}}" class="sub-item__anchor">Creacion de Usuarios</a>
                                     </li>
                                 </ul>
                             </div>
