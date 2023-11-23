@@ -61,34 +61,33 @@ class MotosController extends Controller
     public function edit($id)
     {
         $motos=Motos::find($id);
-        return view('Motos.Edit');
+        return view('Motos.Edit',compact('motos'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(MotosRequest $request, Motos $motos)
+    public function update(MotosRequest $request, int $motosId)
     {
         try{
-            $request->validated();
+            $motos=Motos::find($motosId);
             $motos->Marca=$request->Marca;
             $motos->Modelo=$request->Modelo;
             $motos->NumeroChasis=$request->NumeroChasis;
             $motos->Matricula=$request->Matricula;
             $motos->save();
-            return redirect()->route('Motos.index')
-            ->withadd('Cliente Creado');
+            return redirect()->route('Motos.index')->with('success', 'Usuario Actualizado');
         }catch (Exception $e){
-            return redirect()->route('Motos.index')
-            -> withadd('Hay un error');
+            return redirect()->route('Motos.edit',$motos->id)->with('error', 'Hubo un error al actualizar el usuario');
         }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Motos $motos)
+    public function destroy(int $motosId)
     {
+        $motos=Motos::find($motosId);
         $motos->delete();
         return redirect('/Motos');
     }

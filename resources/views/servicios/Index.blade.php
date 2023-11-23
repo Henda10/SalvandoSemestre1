@@ -34,7 +34,7 @@
                 <tr class="text-center">
                     <td class="border px-2 py-2 whitespace-nowrap">{{$catego->id}}</td>
                     <td class="border px-2 py-2 whitespace-nowrap">{{$catego->Servicio}}</td>
-                    <td class="border px-2 py-2 whitespace-nowrap">{{$cat->Categoria}}</td>
+                    <td class="border px-2 py-2 whitespace-nowrap">{{$catego->Categoria}}</td>
                     <td class="border px-2 py-2 whitespace-nowrap">
 
                         <a href="{{route('servicios.edit',$catego->id)}}">
