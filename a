@@ -1,0 +1,126 @@
+[33mcommit 4537df8b4cc9b49da7e32a47be7d10ea326fe24b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: d8017b9 9e14ca3
+Author: Nal4ever <daniloquintanilla342@gmail.com>
+Date:   Wed Nov 22 21:12:38 2023 -0600
+
+    bebesita bebe lean
+
+[33mcommit d8017b9a334ea8c6e9318b563426b3be417cc811[m
+Author: Nal4ever <daniloquintanilla342@gmail.com>
+Date:   Wed Nov 22 21:04:44 2023 -0600
+
+    Mas actualizaciones
+
+[33mcommit 9e14ca339f9c6810a71645d4e82a04a30cdf1259[m
+Author: Eliel J. E. Escoto <77648539+ElielJEE@users.noreply.github.com>
+Date:   Wed Nov 22 20:10:53 2023 -0600
+
+    ADD: creacion del dashboar boton en sidebar | REFACTOR: se modifico el clientes.edit file y el users.edit file
+
+[33mcommit c62bdf94f873a5d611a5fd76430b2c4fc5514035[m
+Author: Nal4ever <daniloquintanilla342@gmail.com>
+Date:   Wed Nov 22 19:01:06 2023 -0600
+
+    Actualizaciones y mamadas
+
+[33mcommit f1d419307896c7b03d9e5af6d3e725c507b91fc3[m
+Author: Nal4ever <daniloquintanilla342@gmail.com>
+Date:   Wed Nov 22 12:19:51 2023 -0600
+
+    Actualizacion vistas clientes
+
+[33mcommit b7413d086944ab29794ee80dbb6db3f960bb3cdf[m
+Author: Eliel J. E. Escoto <77648539+ElielJEE@users.noreply.github.com>
+Date:   Wed Nov 22 10:24:16 2023 -0600
+
+    usuarios creacion
+
+[33mcommit 6d4e38c08c142559aad22ba64fe6bc82219dccd9[m
+Author: Nal4ever <daniloquintanilla342@gmail.com>
+Date:   Mon Nov 20 20:11:35 2023 -0600
+
+    Creacion de vistas de Motos
+
+[33mcommit c4d27882abb7d0bbbcc3525f0f73f731dec72b76[m
+Merge: a8d9bda 983ec32
+Author: Nal4ever <daniloquintanilla342@gmail.com>
+Date:   Mon Nov 20 13:43:30 2023 -0600
+
+    Merge branch 'main' of https://github.com/Henda10/SalvandoSemestre1
+
+[33mcommit a8d9bda373edaab3579a74389dfb25add6f1d77c[m
+Author: Nal4ever <daniloquintanilla342@gmail.com>
+Date:   Mon Nov 20 13:42:52 2023 -0600
+
+    Correcion en vistas de Clientes y Categorias
+
+[33mcommit 983ec32386b1f3f4bcf37b769ef671e813ec3d85[m
+Author: Henry Hernandez <henryhernandez124@yahoo.com>
+Date:   Tue Nov 14 21:50:03 2023 -0600
+
+    Actualizando datos de etiquetas
+
+[33mcommit bdbbda6cf8eb4ba092ef949969186840ad63238f[m
+Author: Nal4ever <daniloquintanilla342@gmail.com>
+Date:   Tue Nov 14 20:22:23 2023 -0600
+
+    Actualizacion de vistas categorias
+
+[33mcommit e2330025aa5c32e00c77826a9217ff1688b2a086[m
+Author: Nal4ever <daniloquintanilla342@gmail.com>
+Date:   Tue Nov 14 19:56:56 2023 -0600
+
+    Se agrego y creo la vista de categorias
+
+[33mcommit 84679bc6adf8432fbc78458be39d81a51a707e67[m
+Author: Nal4ever <daniloquintanilla342@gmail.com>
+Date:   Tue Nov 14 17:58:34 2023 -0600
+
+    Actualizacion de vistas
+
+[33mcommit 6ab0bf745e93c7c77ebed0a80e11d3103062f78f[m
+Author: Jeffrey <jeffreysoza2000@gmail.com>
+Date:   Thu Nov 9 19:36:55 2023 -0600
+
+    Correcion de iconos not being displayed on sidebar
+    
+    Las imagenes estaban corruptas al parecer, asi que se reemplazo por unas nuevas sacadas del RAR.
+
+[33mcommit ceb8cf251ec544174a33abdf0d5c8914cbc0ee6f[m
+Author: Henry Hernandez <henryhernandez124@yahoo.com>
+Date:   Thu Nov 9 17:00:17 2023 -0600
+
+    Actualizacion de rutas y agregacion del side bar
+
+[33mcommit 828c54a9d689fd5705884009a2981ec00fbba2bb[m
+Author: Henry Hernandez <henryhernandez124@yahoo.com>
+Date:   Thu Nov 9 11:56:34 2023 -0600
+
+    Titulos actualizados
+
+[33mcommit 2361b114232e1588c2f5f142d77f698d9d01d6a3[m
+Author: Jeffrey <jeffreysoza2000@gmail.com>
+Date:   Thu Nov 9 11:37:43 2023 -0600
+
+    Vista login inicia por defecto
+
+[33mcommit 60e6fc953ecf77de54747666502a9368d6318686[m
+Author: Jeffrey <jeffreysoza2000@gmail.com>
+Date:   Thu Nov 9 02:03:31 2023 -0600
+
+    Creacion de vistas con su respectivo enrutamiento parte 1
+    
+    vistas maquetadas:
+    dashboard
+    listado de usuarios
+    listado de motociclistas
+    listado de clientes
+    pedidos
+    
+    componente para el nav globlal
+
+[33mcommit 094935686e7f5127bb05e50d4e26a6850bc991b8[m
+Author: Henry Hernandez <henryhernandez124@yahoo.com>
+Date:   Wed Nov 8 20:22:49 2023 -0600
+
+    primera entrega
