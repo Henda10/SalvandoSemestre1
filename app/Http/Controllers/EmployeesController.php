@@ -73,31 +73,12 @@ class EmployeesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    /* public function update(EmployeesRequest $request, Employees $employees)
-    {
-        try {
-            $request->validated();
-            $employees->Primernombre = $request -> input('Primernombre');
-            $employees->Segundonombre = $request -> input('Segundonombre');
-            $employees->PrimerApellido = $request -> input('PrimerApellido');
-            $employees->SegundoApellido = $request -> input('SegundoApellido');
-            $employees->Cedula = $request -> input('Cedula');
-            $employees->Numero = $request -> input('Numero');
-            $employees->save();
-            return redirect()->route('usuarios.index')
-            ->withadd('Usuario Actualizado');
-        } catch (Exception $e) {
-            return redirect()->route('usuarios.create')
-            -> withadd('Hay un error');
 
-        }
-    } */
-
-    public function update(EmployeesRequest $request, Employees $employees)
+    public function update(EmployeesRequest $request, int $employeesId)
     {
         try {
             // No es necesario llamar a validated() aquí
-
+            $employees=Employees::find($employeesId);
             $employees->Primernombre = $request->input('Primernombre');
             $employees->Segundonombre = $request->input('Segundonombre');
             $employees->PrimerApellido = $request->input('PrimerApellido');
@@ -115,8 +96,9 @@ class EmployeesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Employees $employees)
+    public function destroy(int $employeesId)
     {
+        $employees=Employees::find($employeesId);
         $employees->delete();
         return redirect('/usuarios');
     }
