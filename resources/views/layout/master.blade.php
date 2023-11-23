@@ -100,28 +100,6 @@
                         </li>
                         <li class="menu-list__dropdown-item">
                             <a href="#" class="dropdown-item__link">
-                                <img src="{{ asset('/img/Categorias.png')}}" alt="" class="dropdown-item__icon">
-                                <span class="dropdown-item__span">Categorias</span>
-                                <img src="{{ asset('/img/arrow.png')}}" alt="" class="dropdown-item__arrow">
-
-                                <input type="checkbox" class="dropdown-item__check">
-                            </a>
-
-                            <div class="dropdown-item__content">
-                                <ul class="dropdown-item__sub">
-                                    <li class="sub-item">
-                                        <img src="{{ asset('/img/Categorias.png')}}" alt="" class="sub-item__icon">
-                                        <a href="{{ route('categorias.index')}}" class="sub-item__anchor">Lista de Categorias</a>
-                                    </li>
-                                    <li class="sub-item">
-                                        <img src="{{ asset('/img/Categorias.png')}}" alt="" class="sub-item__icon">
-                                        <a href="{{ route('categorias.create')}}" class="sub-item__anchor">Creacion de Categorias</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="menu-list__dropdown-item">
-                            <a href="#" class="dropdown-item__link">
                                 <img src="{{ asset('/img/Motociclistas.png')}}" alt="" class="dropdown-item__icon">
                                 <span class="dropdown-item__span">Motos</span>
                                 <img src="{{ asset('/img/arrow.png')}}" alt="" class="dropdown-item__arrow">

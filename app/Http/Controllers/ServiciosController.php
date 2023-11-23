@@ -24,7 +24,7 @@ class ServiciosController extends Controller
      */
     public function create()
     {
-        return view('servicios.Create',compact('categoria'));
+        return view('servicios.Create');
     }
 
     /**
@@ -56,24 +56,39 @@ class ServiciosController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Servicios $servicios)
+    public function edit($id)
     {
         //
+        $servicios=Servicios::find($id);
+        return view('servicios.Edit',compact('servicios'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Servicios $servicios)
+    public function update(ServiciosRequest $request, int $serviciosId)
     {
         //
+        try {
+            $service=Servicios::find($serviciosId);
+            $service ->Servicio = $request ->Servicio;
+            $service->save();
+            return redirect()->route('servicios.index')
+            ->withadd('Se creo el producto correctamente');
+        } catch (Exception $e) {
+            return redirect()->route('servicios.create')
+            ->witherrors('Ha ocurrido un error');
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Servicios $servicios)
+    public function destroy(int $serviciosId)
     {
         //
+        $servicio=Servicios::find($serviciosId);
+        $servicio->delete();
+        return redirect('/servicios');
     }
 }

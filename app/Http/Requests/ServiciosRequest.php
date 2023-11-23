@@ -22,8 +22,7 @@ class ServiciosRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'Servicio'=>['required','min:4','max:15'],
-            'Categoria'=>['required','min:0']
+            'Servicio'=>['required','min:4','max:15']
         ];
     }
 }
