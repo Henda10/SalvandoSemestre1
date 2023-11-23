@@ -113,7 +113,7 @@
                 <button
                     class="border rounded-lg text-sm px-3 py-2 text-center font-semibold hover:bg-sky-800 bg-sky-600 text-white flex justify-center items-center"
                     type="submit">
-                    <a href="{{ route('user_list')}}">
+                    <a href="{{ route('usuarios.index')}}">
                     <div class="m-1">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
                             id="addUser"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->

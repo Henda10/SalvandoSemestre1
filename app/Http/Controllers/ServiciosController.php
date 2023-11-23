@@ -31,16 +31,15 @@ class ServiciosController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ServiciosRequest $request)
     {
         try {
             $request->validated();
             $service = new servicios();
-            $service ->nombre_producto = $request ->name;
-            $service ->precio_producto = $request ->price;
-            $service->fk_categories = $request -> categoria;
+            $service ->Servicio = $request ->Servicio;
+            $service->fk_categorias = $request -> Categoria;
             $service->save();
-            return redirect()->route('products.create')
+            return redirect()->route('servicios.index')
             ->withadd('Se creo el producto correctamente');
         } catch (Exception $e) {
             return redirect()->route('products.create')
@@ -53,7 +52,7 @@ class ServiciosController extends Controller
      */
     public function show(Servicios $servicios)
     {
-        //
+
     }
 
     /**
