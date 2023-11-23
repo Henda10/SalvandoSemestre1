@@ -36,7 +36,7 @@
                             </svg>
                         </div>
                         <div>
-                            <a href="{{route('motociclistas.create')}}" class="m-1">Nuevo Pedido</a>
+                            <a href="{{route('pedidos.create')}}" class="m-1">Nuevo Pedido</a>
                         </div>
                     </button>
                 </div>
