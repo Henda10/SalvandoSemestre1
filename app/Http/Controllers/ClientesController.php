@@ -27,7 +27,7 @@ class ClientesController extends Controller
             $client->Direccion = $request -> input('Direccion');
             $client->Celular = $request -> input('Celular');
             $client->save();
-            return redirect()->route('clientes.create')
+            return redirect()->route('clientes.index')
             ->withadd('Cliente Creado');
         }catch (Exception $e){
             return redirect()->route('clientes.create')
