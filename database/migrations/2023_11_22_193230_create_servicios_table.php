@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('servicios', function (Blueprint $table) {
             $table->id();
             $table->string('Servicio');
-            $table->unsignedBigInteger('fk_categorias')->nullable();
-            $table->foreign('fk_categorias')->references('id')->on('Categorias')->onDelete('Cascade');
             $table->timestamps();
         });
     }

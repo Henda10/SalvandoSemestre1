@@ -39,30 +39,6 @@
                             <a href="{{route('usuarios.create')}}" class="m-1">Nuevo usuario</a>
                         </div>
                     </button>
-                    <button
-                        class="border rounded-lg text-sm px-3 py-2 text-center font-semibold hover:bg-sky-800 bg-sky-600 text-white flex justify-center items-center"
-                        type="submit">
-                        <a href="{{route('categorias.index')}}">
-                        <div class="m-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
-                                id="addUser"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                <style>
-                                    #addUser {
-                                        fill: #ffffff
-                                    }
-                                </style>
-                                <path
-                                    d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
-                            </svg>
-                        </div>
-                        <div >
-
-                        </div>
-                        <div>
-                            <span  class="m-1" >Lista de Categorias</span>
-                        </div>
-                        </a>
-                    </button>
                 </div>
             </div>
         </div>

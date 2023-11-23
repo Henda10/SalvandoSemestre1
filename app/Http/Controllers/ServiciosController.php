@@ -6,6 +6,7 @@ use App\Models\Servicios;
 use App\Models\Categorias;
 use Illuminate\Http\Request;
 use App\Http\Requests\ServiciosRequest;
+use Exception;
 
 class ServiciosController extends Controller
 {
@@ -14,9 +15,8 @@ class ServiciosController extends Controller
      */
     public function index()
     {
-        $servicio=servicios::paginate(10);
-        $categoria=Categorias::all();
-        return view('servicios.Index',compact('servicio','categoria'));
+        $servicio=Servicios::all();
+        return view('servicios.Index',compact('servicio'));
     }
 
     /**
@@ -24,7 +24,6 @@ class ServiciosController extends Controller
      */
     public function create()
     {
-        $categoria = Categorias::all();
         return view('servicios.Create',compact('categoria'));
     }
 
@@ -37,7 +36,6 @@ class ServiciosController extends Controller
             $request->validated();
             $service = new servicios();
             $service ->Servicio = $request ->Servicio;
-            $service->fk_categorias = $request -> Categoria;
             $service->save();
             return redirect()->route('servicios.index')
             ->withadd('Se creo el producto correctamente');

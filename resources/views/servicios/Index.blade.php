@@ -25,19 +25,17 @@
                 <tr>
                     <th class="border px-2 py-2">Id</th>
                     <th class="border px-2 py-2">Servicio</th>
-                    <th class="border px-2 py-2">Categoria</th>
                     <th class="border px-2 py-2">Acciones</th>
                 </tr>
             </thead>
             <tbody class="bg-white divide-y min-w-full divide-gray-200">
-                @foreach ($servicio as $catego )
+                @foreach ($servicio as $servi )
                 <tr class="text-center">
-                    <td class="border px-2 py-2 whitespace-nowrap">{{$catego->id}}</td>
-                    <td class="border px-2 py-2 whitespace-nowrap">{{$catego->Servicio}}</td>
-                    <td class="border px-2 py-2 whitespace-nowrap">{{$cat->Categoria}}</td>
+                    <td class="border px-2 py-2 whitespace-nowrap">{{$servi->id}}</td>
+                    <td class="border px-2 py-2 whitespace-nowrap">{{$servi->Servicio}}</td>
                     <td class="border px-2 py-2 whitespace-nowrap">
 
-                        <a href="{{route('servicios.edit',$catego->id)}}">
+                        <a href="{{route('servicios.edit',$servi->id)}}">
                             <button
                             class="border rounded-lg text-sm px-2 py-2 text-center font-semibold hover:bg-green-800 bg-green-600 text-white flex justify-center items-center">
                             <svg xmlns="{{ asset('vendor/fontawesome-free/svgs/solid/user-pen') }}" height="0.8rem"
@@ -56,7 +54,7 @@
                             </div>
                         </button>
                         </a>
-                        <form action="{{route('servicios.destroy',$catego)}}"method="POST">
+                        <form action="{{route('servicios.destroy',$servi)}}"method="POST">
                             @csrf
                             @method('delete')
                             <button
@@ -85,5 +83,4 @@
         </table>
     </div>
 </section>
-{{$servicio->links()}}
 @endsection
