@@ -9,6 +9,7 @@ use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\EmployeesController;
 use App\Http\Controllers\MotosController;
+use App\Http\Controllers\ServiciosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,4 @@ Route::resource('/clientes',ClientesController::class);
 Route::resource('/categorias',CategoriasController::class);
 Route::resource('/Motos',MotosController::class);
 Route::resource('/usuarios',EmployeesController::class);
+Route::resource('/servicios',ServiciosController::class);

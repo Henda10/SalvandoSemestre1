@@ -30,13 +30,14 @@
                 </tr>
             </thead>
             <tbody class="bg-white divide-y min-w-full divide-gray-200">
-                @foreach ($categoria as $catego )
+                @foreach ($servicio as $catego )
                 <tr class="text-center">
                     <td class="border px-2 py-2 whitespace-nowrap">{{$catego->id}}</td>
-                    <td class="border px-2 py-2 whitespace-nowrap">{{$catego->Categoria}}</td>
+                    <td class="border px-2 py-2 whitespace-nowrap">{{$catego->Servicio}}</td>
+                    <td class="border px-2 py-2 whitespace-nowrap">{{$cat->Categoria}}</td>
                     <td class="border px-2 py-2 whitespace-nowrap">
 
-                        <a href="{{route('categorias.edit',$catego->id)}}">
+                        <a href="{{route('servicios.edit',$catego->id)}}">
                             <button
                             class="border rounded-lg text-sm px-2 py-2 text-center font-semibold hover:bg-green-800 bg-green-600 text-white flex justify-center items-center">
                             <svg xmlns="{{ asset('vendor/fontawesome-free/svgs/solid/user-pen') }}" height="0.8rem"
@@ -55,7 +56,7 @@
                             </div>
                         </button>
                         </a>
-                        <form action="{{route('categorias.destroy',$catego)}}"method="POST">
+                        <form action="{{route('servicios.destroy',$catego)}}"method="POST">
                             @csrf
                             @method('delete')
                             <button
@@ -83,56 +84,6 @@
             </tbody>
         </table>
     </div>
-    <div class="flex items-center mr-5 my-3">
-        {{-- agregar nuevo usuario --}}
-        <div class="text-center">
-            <button
-                class="border rounded-lg text-sm px-3 py-2 text-center font-semibold hover:bg-sky-800 bg-sky-600 text-white flex justify-center items-center"
-                type="submit">
-                <a href="{{route('categorias.create')}}">
-                <div class="m-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
-                        id="addUser"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <style>
-                            #addUser {
-                                fill: #ffffff
-                            }
-                        </style>
-                        <path
-                            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
-                    </svg>
-                </div>
-                <div>
-                    <span class="m-1">Categoria Nueva</span>
-                </div>
-                </a>
-            </button>
-        </div>
-        <div class="flex items-center mr-5 my-3">
-            {{-- agregar nuevo usuario --}}
-            <div class="text-center">
-                <button
-                    class="border rounded-lg text-sm px-3 py-2 text-center font-semibold hover:bg-sky-800 bg-sky-600 text-white flex justify-center items-center"
-                    type="submit">
-                    <a href="{{ route('user_list')}}">
-                    <div class="m-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
-                            id="addUser"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                            <style>
-                                #addUser {
-                                    fill: #ffffff
-                                }
-                            </style>
-                            <path
-                                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <span class="m-1">Regresar</span>
-                    </div>
-                    </a>
-                </button>
-            </div>
 </section>
-{{$categoria->links()}}
+{{$servicio->links()}}
 @endsection

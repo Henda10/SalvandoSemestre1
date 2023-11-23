@@ -120,6 +120,28 @@
                                 </ul>
                             </div>
                         </li>
+                        <li class="menu-list__dropdown-item">
+                            <a href="#" class="dropdown-item__link">
+                                <img src="{{ asset('/img/Users.png')}}" alt="" class="dropdown-item__icon">
+                                <span class="dropdown-item__span">Servicios</span>
+                                <img src="{{ asset('/img/arrow.png')}}" alt="" class="dropdown-item__arrow">
+
+                                <input type="checkbox" class="dropdown-item__check">
+                            </a>
+
+                            <div class="dropdown-item__content">
+                                <ul class="dropdown-item__sub">
+                                    <li class="sub-item">
+                                        <img src="{{ asset('/img/user.png')}}" alt="" class="sub-item__icon">
+                                        <a href="{{ route('servicios.index')}}" class="sub-item__anchor">Lista de Servicios</a>
+                                    </li>
+                                    <li class="sub-item">
+                                        <img src="{{ asset('/img/user.png')}}" alt="" class="sub-item__icon">
+                                        <a href="{{ route('servicios.create')}}" class="sub-item__anchor">Creacion de Servicios</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li class="menu-list__item">
                             <a href="#" class="item-link">
                                 <img src="{{ asset('/img/Delivery.png')}}" alt="" class="item-link__icon">
