@@ -11,7 +11,7 @@ class MoticicleGuyRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,12 @@ class MoticicleGuyRequest extends FormRequest
     {
         return [
             //
+            'Primernombre'=>['required','min:1','max:10'],
+            'Segundonombre'=>['required','min:1','max:10'],
+            'PrimerApellido'=>['required','min:1','max:15'],
+            'SegundoApellido'=>['required','min:1','max:15'],
+            'Celular'=>['required','min:1','max:8'],
+            'Matricula'=>['required','min:0']
         ];
     }
 }

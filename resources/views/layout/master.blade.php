@@ -27,11 +27,6 @@
                 </div>
                 <div class="sidebarmenu__menu-list">
                     <ul class="menu-list">
-                        <li class="menu-list__dropdown-item ">
-                            <a href="{{route('dashboard')}}" class="dropdown-item__link">
-                                <span class="dropdown-item__span">Dashboard</span>
-                            </a>
-                        </li>
                         <li class="menu-list__dropdown-item">
                             <a href="#" class="dropdown-item__link">
                                 <img src="{{ asset('/img/Users.png')}}" alt="" class="dropdown-item__icon">
@@ -67,11 +62,11 @@
                                 <ul class="dropdown-item__sub">
                                     <li class="sub-item">
                                         <img src="{{ asset('/img/Motociclistas.png')}}" alt="" class="sub-item__icon">
-                                        <a href="{{ route('motorcycle_guys_list')}}" class="sub-item__anchor">Lista de Motociclistas</a>
+                                        <a href="{{ route('motociclistas.index')}}" class="sub-item__anchor">Lista de Motociclistas</a>
                                     </li>
                                     <li class="sub-item">
                                         <img src="{{ asset('/img/Motociclistas.png')}}" alt="" class="sub-item__icon">
-                                        <a href="#" class="sub-item__anchor">Creacion de Motociclistas</a>
+                                        <a href="{{route('motociclistas.create')}}" class="sub-item__anchor">Creacion de Motociclistas</a>
                                     </li>
                                 </ul>
                             </div>
@@ -142,17 +137,27 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="menu-list__item">
-                            <a href="#" class="item-link">
-                                <img src="{{ asset('/img/Delivery.png')}}" alt="" class="item-link__icon">
-                                <span class="item__span">Delivery</span>
+                        <li class="menu-list__dropdown-item">
+                            <a href="#" class="dropdown-item__link">
+                                <img src="{{ asset('/img/pedidos.png')}}" alt="" class="dropdown-item__icon">
+                                <span class="dropdown-item__span">Pedidos</span>
+                                <img src="{{ asset('/img/arrow.png')}}" alt="" class="dropdown-item__arrow">
+
+                                <input type="checkbox" class="dropdown-item__check">
                             </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a href="{{ route('orders')}}" class="item-link">
-                                <img src="{{ asset('/img/Pedidos.png')}}" alt="" class="item-link__icon">
-                                <span class="item__span">Pedidos</span>
-                            </a>
+
+                            <div class="dropdown-item__content">
+                                <ul class="dropdown-item__sub">
+                                    <li class="sub-item">
+                                        <img src="{{ asset('/img/Servicios.png')}}" alt="" class="sub-item__icon">
+                                        <a href="{{ route('pedidos.index')}}" class="sub-item__anchor">Lista de Pedidos</a>
+                                    </li>
+                                    <li class="sub-item">
+                                        <img src="{{ asset('/img/Servicios.png')}}" alt="" class="sub-item__icon">
+                                        <a href="{{ route('pedidos.create')}}" class="sub-item__anchor">Creacion de Pedidos</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -167,7 +172,7 @@
         </div>
         <div class="client-area right-content">
             <header class="client-area__header">
-                <h1 class="header-title">No se que</h1>
+                <h1 class="header-title">Gestion de Envios "Mandados Rapi"</h1>
             </header>
             @yield('content')
         </div>

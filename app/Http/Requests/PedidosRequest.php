@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class MotosRequest extends FormRequest
+class PedidosRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,10 +22,11 @@ class MotosRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'Marca'=>['required','min:1','max:10'],
-            'Modelo'=>['required','min:1','max:50'],
-            'NumeroChasis'=>['required','min:1','max:20'],
-            'Matricula'=>['required','min:1','max:20'],
+            'Descripcion'=>['required','min:1','max:100'],
+            'PrecioDelivery'=>['required','min:1','max:10'],
+            'Estado'=>['required','min:1','max:20'],
+            'Cliente'=>['required','min:0','max:20'],
+            'Servicio'=>['required','min:0','max:20'],
         ];
     }
 }

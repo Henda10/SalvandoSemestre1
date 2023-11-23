@@ -17,9 +17,7 @@ return new class extends Migration
             $table->string('Segundonombre');
             $table->string('PrimerApellido');
             $table->string('SegundoApellido');
-            $table->string('Direccion');
-            $table->string('Cedula');
-            $table->integer('NumLicencia');
+            $table->integer('Numero');
             $table->unsignedBigInteger('fk_motos')->nullable();
             $table->foreign('fk_motos')->references('id')->on('motos')->onDelete('Cascade');
             $table->timestamps();

@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class MotocicleGuy extends Model
 {
     use HasFactory;
+    public function motos(){
+        return $this->belongsTo(Motos::class);
+    }
 }
