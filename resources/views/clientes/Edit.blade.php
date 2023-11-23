@@ -4,7 +4,7 @@
     <div class="clientes-container">
         <form action="{{route('clientes.update',$cliente)}}" class="clientes-form" method="POST">
             @csrf
-            @method('put')
+            @method('PUT')
             <label for="Primernombre" class="clientes-label label">Primer nombre</label>
             <input type="text" class="input input-clientes" name="Primernombre" placeholder="Primer nombre" value="{{$cliente->Primernombre}}">
             <label for="Segundonombre" class="clientes-label label">Segundo nombre</label>
