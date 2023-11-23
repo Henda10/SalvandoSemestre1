@@ -27,6 +27,11 @@
                 </div>
                 <div class="sidebarmenu__menu-list">
                     <ul class="menu-list">
+                        <li class="menu-list__dropdown-item ">
+                            <a href="{{route('dashboard')}}" class="dropdown-item__link">
+                                <span class="dropdown-item__span">Dashboard</span>
+                            </a>
+                        </li>
                         <li class="menu-list__dropdown-item">
                             <a href="#" class="dropdown-item__link">
                                 <img src="{{ asset('/img/Users.png')}}" alt="" class="dropdown-item__icon">

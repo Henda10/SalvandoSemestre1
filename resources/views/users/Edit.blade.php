@@ -2,9 +2,9 @@
 @section('content')
 <link rel="stylesheet" href={{asset('css/Clientes.css')}}>
     <div class="clientes-container">
-        <form action="{{route('usuarios.update',$employees)}}" class="clientes-form" method="POST">
+        <form action="{{route('usuarios.update',$employees->id)}}" class="clientes-form" method="POST">
             @csrf
-            @method('put')
+            @method('PUT')
             <label for="Primernombre" class="clientes-label label">Primer nombre</label>
             <input type="text" class="input input-clientes" name="Primernombre" placeholder="Primer nombre" value="{{$employees->Primernombre}}">
 
@@ -21,7 +21,7 @@
             <input type="text" class="input input-clientes" name="Cedula" placeholder="Cedula" value="{{$employees->Cedula}}">
 
             <label for="Numero" class="clientes-label label">Celular</label>
-            <input type="Number" class="input input-clientes" name="Numero" placeholder="Numero" value="{{$employees->Numero}}">
+            <input type="number" class="input input-clientes" name="Numero" placeholder="Numero" value="{{$employees->Numero}}">
 
             <button class="btn send-btn">
                 <span class="span spn-btn">Actualizar</span>
