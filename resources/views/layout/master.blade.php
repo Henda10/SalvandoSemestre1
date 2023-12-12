@@ -18,7 +18,7 @@
             <aside class="sidebarmenu">
                 <div class="sidebarmenu__page-title">
                     <h1 class="page-title">
-                        Delivery Mandados Rapidos
+                        Mandados Rapi
                     </h1>
                 </div>
                 <div class="sidebarmenu__user-info">

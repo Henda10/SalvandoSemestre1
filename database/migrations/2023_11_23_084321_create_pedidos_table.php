@@ -17,9 +17,9 @@ return new class extends Migration
             $table->integer('PrecioDelivery');
             $table->string('Estado');
             $table->unsignedBigInteger('fk_clientes')->nullable();
-            $table->foreign('fk_clientes')->references('id')->on('Clientes')->onDelete('Cascade');
+            $table->foreign('fk_clientes')->references('id')->on('Clientes');
             $table->unsignedBigInteger('fk_servicios')->nullable();
-            $table->foreign('fk_servicios')->references('id')->on('servicios')->onDelete('Cascade');
+            $table->foreign('fk_servicios')->references('id')->on('servicios');
             $table->timestamps();
         });
     }

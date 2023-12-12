@@ -11,8 +11,8 @@
 
 <body>
     <div class="form-container">
-        <h1>Sistema de Registro de Pedidos "Mandados Rapidos"</h1>
-        <h2>SISREP</h2>
+        <h1>Sistema para Gestion de Envios "Mandados Rapi"</h1>
+        <h2>SISGE</h2>
         <div class="form-container__center">
             <h1 class="form-title">Iniciar Sesion</h1>
             <form action="/login" method="POST" class="form-content login-form">

@@ -23,12 +23,12 @@ class EmployeesRequest extends FormRequest
     {
         return [
             //
-            'Primernombre'=>['required','min:5','max:10'],
-            'Segundonombre'=>['required','min:5','max:10'],
-            'PrimerApellido'=>['required','min:3','max:15'],
-            'SegundoApellido'=>['required','min:3','max:15'],
-            'Cedula'=>['required','min:5','max:60'],
-            'Numero'=>['required','min:1','max:8'],
+            'Primernombre'=>['required','min:1','max:60'],
+            'Segundonombre'=>['required','min:1','max:60'],
+            'PrimerApellido'=>['required','min:1','max:65'],
+            'SegundoApellido'=>['required','min:1','max:65'],
+            'Cedula'=>['required','min:1','max:60'],
+            'Numero'=>['required','min:1','max:68']
         ];
     }
 }

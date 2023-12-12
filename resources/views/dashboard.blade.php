@@ -23,7 +23,7 @@
             <thead class="bg-gray-100 text-center border divide-y">
                 <tr>
                     <th class="border px-2 py-2">Cedula</th>
-                    <th class="border px-2 py-2">Nombre</th>
+                    <th class="border px-2 py-2">Usuario</th>
                     <th class="border px-2 py-2">Cargo</th>
                 </tr>
             </thead>

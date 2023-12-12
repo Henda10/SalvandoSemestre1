@@ -103,7 +103,10 @@ class PedidosController extends Controller
     public function destroy(int $pedidosId)
     {
         //
+        
         $pedidos=Pedidos::find($pedidosId);
+        dd($pedidos);
+        $this->authorize('delete', $pedidos);
         $pedidos->delete();
         return redirect('/pedidos');
     }

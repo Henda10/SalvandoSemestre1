@@ -39,9 +39,12 @@ Route::controller(ViewsController::class)->group(function () {
 });
 
 Route::resource('/clientes',ClientesController::class);
-Route::resource('/categorias',CategoriasController::class);
 Route::resource('/Motos',MotosController::class);
 Route::resource('/usuarios',EmployeesController::class);
 Route::resource('/servicios',ServiciosController::class);
 Route::resource('/motociclistas',MotocicleGuyController::class);
 Route::resource('/pedidos',PedidosController::class);
+Route::middleware('auth:sanctum')->delete('pedidos/{pedido}', [PedidosController::class, 'destroy']);
+/* Route::delete('users/{id}', function ($id) {
+    
+}); */
